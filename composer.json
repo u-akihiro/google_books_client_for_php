@@ -1,0 +1,12 @@
+{
+    "name": "u-akihiro/google_books_client_for_php",
+    "description": "google books api client library for php.",
+    "require": {
+        "guzzlehttp/guzzle": "~6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "GoogleBooksAPI\\": "src/"
+        }
+    }
+}
