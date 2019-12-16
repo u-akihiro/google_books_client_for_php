@@ -3,7 +3,7 @@ namespace GoogleBooksAPI;
 
 class VolumeInfo extends Element
 {
-    private $propertis = [
+    private $properties = [
         'title',
         'subtitle',
         'publisher',
@@ -15,7 +15,7 @@ class VolumeInfo extends Element
     public function __construct($jsonObj)
     {
         $this->jsonObj = $jsonObj;
-        foreach ($this->propertis as $name) {
+        foreach ($this->properties as $name) {
             $this->set($name);
         }
     }
