@@ -2,14 +2,12 @@
 
 namespace GoogleBooksAPI;
 
-class Item extends Element
+class VolumeList extends Element
 {
     private $properties= [
         'kind',
-        'id',
-        'etag',
-        'selfLink',
-        'volumeInfo'
+        'items',
+        'totalItems'
     ];
 
     public function __construct($jsonObj)

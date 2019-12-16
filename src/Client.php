@@ -30,9 +30,9 @@ class Client
         $this->queryStrings[] = $str;
     }
 
-    public function request(): \GuzzleHttp\Psr7\Response
+    public function request()
     {
-        return $this->httpClient->request(
+        $response = $this->httpClient->request(
             'GET', 
             '/books/v1/volumes', 
             [
@@ -43,5 +43,8 @@ class Client
                 ]
             ]
         );
+
+        $jsonObj = json_decode($response->getBody()->getContents());
+        return new VolumeList($jsonObj);
     }
 }
